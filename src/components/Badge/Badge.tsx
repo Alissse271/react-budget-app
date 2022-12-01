@@ -1,5 +1,7 @@
+import { useCurrencyContext } from "context/CurrencyContext";
 import { StyledBudge } from "./styles";
 
 export const Badge = () => {
-  return <StyledBudge />;
+  const { curentCurrency } = useCurrencyContext();
+  return <StyledBudge>{curentCurrency.value}</StyledBudge>;
 };

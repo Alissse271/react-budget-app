@@ -5,7 +5,6 @@ const StyledRemainingCard = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  width: 335px;
   padding: 0 20px;
 
   background: #ccd5ff;
