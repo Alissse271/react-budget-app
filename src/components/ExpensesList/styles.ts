@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-const StyledExpensesList = styled.div``;
+const StyledExpensesList = styled.ul``;
 
 export { StyledExpensesList };

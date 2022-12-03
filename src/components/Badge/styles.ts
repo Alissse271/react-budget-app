@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const StyledBudge = styled.div`
+  display: inline-block;
   padding: 3px 14px;
 
   font-size: 12px;

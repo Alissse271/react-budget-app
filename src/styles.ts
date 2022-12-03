@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledApp = styled.div`
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
   grid-row-gap: 30px;
 
   width: 375px;

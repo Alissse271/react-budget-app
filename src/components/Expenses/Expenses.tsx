@@ -1,3 +1,4 @@
+import { ExpensesList } from "components/ExpensesList/ExpensesList";
 import { Search } from "components/Search/Search";
 import { Title } from "components/Title/Title";
 import { useInput } from "hooks";
@@ -9,6 +10,7 @@ export const Expenses = () => {
     <StyledExpenses>
       <Title label={"Expenses"} />
       <Search type={"search"} placeholder={"search..."} {...search} />
+      <ExpensesList />
     </StyledExpenses>
   );
 };

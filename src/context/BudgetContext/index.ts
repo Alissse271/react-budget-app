@@ -1,3 +1,3 @@
-import { BudgetContext } from "./BudgetContext";
+import { BudgetContextProvider, useBudgetContext } from "./BudgetContext";
 
-export { BudgetContext };
+export { BudgetContextProvider, useBudgetContext };

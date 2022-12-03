@@ -1,19 +1,17 @@
 import styled from "styled-components";
 
 const StyledInput = styled.input`
-  width: 100%;
-  padding: 15px 20px;
+  width: 153px;
 
-  font-size: 16px;
-  line-height: 19px;
-  color: #999999;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.6);
 
-  background: #fff;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  background-color: transparent;
 
   &::placeholder {
-    color: #999;
+    color: rgba(255, 255, 255, 0.6);
   }
   &:focus-visible {
     outline-width: 0px;

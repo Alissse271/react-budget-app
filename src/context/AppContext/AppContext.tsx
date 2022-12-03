@@ -1,4 +1,4 @@
-import { ComponentType, JSXElementConstructor, PropsWithChildren, ReactNode } from "react";
+import { ComponentType, PropsWithChildren, ReactNode } from "react";
 
 interface IProps {
   components: Array<ComponentType<PropsWithChildren<any>>>;
