@@ -1,3 +1,3 @@
-import { ExpensesContextProvider } from "./ExpensesContext";
+import { ExpensesContextProvider, useExpensesContext } from "./ExpensesContext";
 
-export { ExpensesContextProvider };
+export { ExpensesContextProvider, useExpensesContext };

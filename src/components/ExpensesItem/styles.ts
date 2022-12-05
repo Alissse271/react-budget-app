@@ -27,5 +27,7 @@ const ButtonDelete = styled.button`
   background: center no-repeat url(${deleteIcon});
   width: 15px;
   height: 15px;
+
+  cursor: pointer;
 `;
 export { StyledExpensesItem, ButtonDelete, Container, ExpenseName };

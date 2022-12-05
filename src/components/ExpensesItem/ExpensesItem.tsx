@@ -1,15 +1,28 @@
 import { Badge } from "components/Badge/Badge";
+import { IExpense } from "context/ExpensesContext/types";
 import { ButtonDelete, StyledExpensesItem, Container, ExpenseName } from "./styles";
+import { useState } from "react";
 
-// key!!!!!
+interface IProps {
+  expense: IExpense;
+}
 
-export const ExpensesItem = () => {
+export const ExpensesItem = ({ expense }: IProps) => {
+  // const [] = useState();
+  const handleDeleteExpense = () => {};
   return (
     <StyledExpensesItem>
-      <ExpenseName>moment</ExpenseName>
+      <ExpenseName>{expense.name}</ExpenseName>
       <Container>
         <Badge />
-        <ButtonDelete type="button">{}</ButtonDelete>
+        <ButtonDelete
+          type="button"
+          onClick={() => {
+            handleDeleteExpense();
+          }}
+        >
+          {}
+        </ButtonDelete>
       </Container>
     </StyledExpensesItem>
   );

@@ -7,6 +7,7 @@ export interface IExpensesContextProviderProps {
 export interface IExpense {
   name: string;
   cost: number;
+  id: string;
 }
 
 export interface IExpensesContext {
