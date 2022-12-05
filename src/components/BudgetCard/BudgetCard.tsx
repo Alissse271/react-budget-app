@@ -16,7 +16,7 @@ export const BudgetCard = () => {
     setNewBudget({ label: enteredBudget.value, value: +enteredBudget.value });
   };
 
-  const Rendercontent = (): JSX.Element => {
+  const RenderContent = (): JSX.Element => {
     if (isEdit) {
       return (
         <Title>
@@ -36,7 +36,7 @@ export const BudgetCard = () => {
   };
   return (
     <StyledBudgetCard>
-      {Rendercontent()}
+      {RenderContent()}
       <EditButton type="button" onClick={handleEnterBudget}>
         {label}
       </EditButton>

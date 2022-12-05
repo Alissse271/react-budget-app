@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-const StyledRemainingCard = styled.div`
+const StyledRemainingCard = styled.div<{ $isOverspending: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding: 0 20px;
 
-  background: #ccd5ff;
+  background: ${({ $isOverspending }) => ($isOverspending ? "#FF0000" : "#ccd5ff")};
   border-radius: 10px;
 `;
 const Title = styled.p`

@@ -9,7 +9,7 @@ const StyledExpensesItem = styled.li`
   justify-content: space-between;
   align-items: center;
 
-  padding: 15px 20px;
+  padding: 14px 20px;
 
   border-bottom: 2px solid #ccd5ff;
   list-style: none;

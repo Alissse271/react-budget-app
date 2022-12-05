@@ -1,20 +1,22 @@
 import { Badge } from "components/Badge/Badge";
 import { IExpense } from "context/ExpensesContext/types";
 import { ButtonDelete, StyledExpensesItem, Container, ExpenseName } from "./styles";
-import { useState } from "react";
+import { useExpensesContext } from "context/ExpensesContext";
 
 interface IProps {
   expense: IExpense;
 }
 
 export const ExpensesItem = ({ expense }: IProps) => {
-  // const [] = useState();
-  const handleDeleteExpense = () => {};
+  const { removeExpense } = useExpensesContext();
+  const handleDeleteExpense = () => {
+    removeExpense(expense.id);
+  };
   return (
     <StyledExpensesItem>
       <ExpenseName>{expense.name}</ExpenseName>
       <Container>
-        <Badge />
+        <Badge>{expense.cost}</Badge>
         <ButtonDelete
           type="button"
           onClick={() => {

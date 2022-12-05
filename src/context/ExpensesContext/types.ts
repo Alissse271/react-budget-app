@@ -6,10 +6,12 @@ export interface IExpensesContextProviderProps {
 
 export interface IExpense {
   name: string;
-  cost: number;
+  cost: string;
   id: string;
 }
 
 export interface IExpensesContext {
   expenses: IExpense[];
+  setNewExpense: (newExpense: IExpense) => void;
+  removeExpense: (id: string) => void;
 }
