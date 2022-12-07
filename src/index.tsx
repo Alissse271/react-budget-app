@@ -4,6 +4,7 @@ import {
   BudgetContextProvider,
   ExpensesContextProvider,
 } from "context";
+import { GlobalStyles } from "GlobalStyles";
 import ReactDOM from "react-dom/client";
 import { App } from "./App";
 
@@ -13,5 +14,6 @@ root.render(
     components={[CurrencyContextProvider, BudgetContextProvider, ExpensesContextProvider]}
   >
     <App />
+    <GlobalStyles />
   </AppContext>,
 );
