@@ -17,4 +17,12 @@ a {
     margin: 0;
     border: 0;
     box-sizing: border-box;
-}`;
+}
+
+#root {
+    display: grid;
+    place-items: center;
+
+    background: #1E3542;
+}
+`;

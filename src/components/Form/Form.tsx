@@ -1,9 +1,8 @@
-import { Button } from "components";
-import { Title } from "components";
+import { Button, Title } from "components";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useBudgetContext, useExpensesContext } from "context";
 import { ErrorMessage, InputsContainer, StyledForm, StyledInput } from "./styles";
 import { v4 as uuidv4 } from "uuid";
-import { useExpensesContext } from "context";
 
 interface IFormValues {
   name: string;
@@ -13,6 +12,8 @@ interface IFormValues {
 
 export const Form = () => {
   const { setNewExpense } = useExpensesContext();
+  const { budget } = useBudgetContext();
+
   const {
     register,
     handleSubmit,
@@ -21,8 +22,12 @@ export const Form = () => {
   } = useForm<IFormValues>();
 
   const onSubmit: SubmitHandler<IFormValues> = ({ name, cost }) => {
-    setNewExpense({ name, cost, id: uuidv4() });
-    reset();
+    if (budget.value) {
+      setNewExpense({ name, cost, id: uuidv4() });
+      reset();
+    } else {
+      alert("Enter your budget!");
+    }
   };
 
   return (
@@ -35,7 +40,7 @@ export const Form = () => {
           {...register("name", {
             required: "*name is required",
             maxLength: { value: 15, message: "*max 15 characters" },
-            pattern: { value: /^[a-zA-Z\s]*$/, message: "*enter only letters" },
+            pattern: { value: /^[a-zA-ZА-ЯЁа-яё\s]*$/, message: "*enter only letters" },
           })}
         />
         {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}

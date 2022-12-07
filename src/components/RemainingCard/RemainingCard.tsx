@@ -1,5 +1,4 @@
 import { useBudgetContext, useCurrencyContext, useExpensesContext } from "context";
-import { useEffect, useState } from "react";
 import { StyledRemainingCard, Title } from "./styles";
 
 export const RemainingCard = () => {
@@ -7,18 +6,13 @@ export const RemainingCard = () => {
   const { budget } = useBudgetContext();
   const { expenses } = useExpensesContext();
 
-  const [isOverspending, setIsOverspending] = useState(false);
-
   const remaining = budget.value - expenses.reduce((remaining, { cost }) => remaining + +cost, 0);
-
-  useEffect(() => {
-    remaining < 0 ? setIsOverspending(true) : setIsOverspending(false);
-  }, [remaining]);
+  const isOverspent = remaining < 0;
 
   return (
-    <StyledRemainingCard $isOverspending={isOverspending}>
+    <StyledRemainingCard $isOverspending={isOverspent}>
       <Title>
-        {isOverspending ? "Overspending by: " : "Remaining: "}
+        {isOverspent ? "Overspending by " : "Remaining:"}
         {curentCurrency.value}
         {Math.abs(remaining)}
       </Title>

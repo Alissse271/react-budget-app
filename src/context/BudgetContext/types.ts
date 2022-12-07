@@ -5,7 +5,6 @@ export interface IBudgetContextProviderProps {
 }
 
 export interface IBudget {
-  label: string;
   value: number;
 }
 

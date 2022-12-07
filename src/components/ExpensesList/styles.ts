@@ -4,6 +4,10 @@ const StyledExpensesList = styled.ul`
   height: 200px;
 
   overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 `;
 
 const EmptyList = styled.div`

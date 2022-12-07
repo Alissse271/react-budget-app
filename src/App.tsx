@@ -1,6 +1,6 @@
-import { Budget } from "components/Budget/Budget";
-import { Expenses } from "components/Expenses/Expenses";
-import { Form } from "components/Form/Form";
+import { Budget } from "components";
+import { Expenses } from "components";
+import { Form } from "components";
 import { GlobalStyles } from "GlobalStyles";
 import { StyledApp } from "styles";
 

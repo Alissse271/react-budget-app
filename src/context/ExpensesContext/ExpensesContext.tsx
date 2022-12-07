@@ -5,28 +5,7 @@ const ExpensesContext = createContext<IExpensesContext>({} as IExpensesContext);
 
 const useExpensesContextValue = () => {
   const [expensesContext, setExpensesContext] = useState<IExpensesContext>(() => ({
-    expenses: [
-      {
-        name: "relax",
-        cost: "200",
-        id: "asdf-ds-fgbvdfgd",
-      },
-      {
-        name: "shopping",
-        cost: "400",
-        id: "dsfj-df-werefvxd",
-      },
-      {
-        name: "study",
-        cost: "100",
-        id: "vfrd-sd-aswesdfh",
-      },
-      {
-        name: "drinking",
-        cost: "250",
-        id: "bngg-se-sdfsdfsd",
-      },
-    ],
+    expenses: [],
     setNewExpense: (newExpense) => {
       setExpensesContext((ctx) => ({
         ...ctx,

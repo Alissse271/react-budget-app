@@ -1,22 +1,17 @@
 import { ExpensesItem } from "components";
-import { useExpensesContext } from "context";
+import { IExpense } from "context/ExpensesContext/types";
+import { StyledExpensesList } from "./styles";
 
-import { EmptyList, StyledExpensesList } from "./styles";
+interface Iprops {
+  expenses: IExpense[];
+}
 
-export const ExpensesList = () => {
-  const { expenses } = useExpensesContext();
-  if (expenses.length) {
-    return (
-      <StyledExpensesList>
-        {expenses.map((item) => {
-          return <ExpensesItem expense={item} key={item.name} />;
-        })}
-      </StyledExpensesList>
-    );
-  }
+export const ExpensesList = ({ expenses }: Iprops) => {
   return (
-    <EmptyList>
-      <p>Oooops 🙈</p>
-    </EmptyList>
+    <StyledExpensesList>
+      {expenses.map((expense) => {
+        return <ExpensesItem expense={expense} key={expense.id} />;
+      })}
+    </StyledExpensesList>
   );
 };
