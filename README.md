@@ -55,7 +55,7 @@ By using the field `search` you can find your expense in the list. You can also 
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Alissse271/react-tips-calculator.git
+   git clone https://github.com/Alissse271/react-budget-app.git
    ```
 2. Install NPM packages
    ```sh
