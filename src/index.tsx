@@ -13,7 +13,7 @@ root.render(
   <AppContext
     components={[CurrencyContextProvider, BudgetContextProvider, ExpensesContextProvider]}
   >
-    <App />
     <GlobalStyles />
+    <App />
   </AppContext>,
 );
