@@ -1,6 +1,4 @@
-import { useBudgetContext } from "context/BudgetContext";
-import { useCurrencyContext } from "context/CurrencyContext";
-import { useExpensesContext } from "context/ExpensesContext";
+import { useBudgetContext, useCurrencyContext, useExpensesContext } from "context";
 import { useEffect, useState } from "react";
 import { StyledRemainingCard, Title } from "./styles";
 

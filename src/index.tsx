@@ -1,7 +1,9 @@
-import { AppContext } from "context/AppContext";
-import { BudgetContextProvider } from "context/BudgetContext";
-import { CurrencyContextProvider } from "context/CurrencyContext";
-import { ExpensesContextProvider } from "context/ExpensesContext";
+import {
+  AppContext,
+  CurrencyContextProvider,
+  BudgetContextProvider,
+  ExpensesContextProvider,
+} from "context";
 import ReactDOM from "react-dom/client";
 
 import { App } from "./App";

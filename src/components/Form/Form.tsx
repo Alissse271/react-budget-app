@@ -1,9 +1,9 @@
-import { Button } from "components/Button/Button";
-import { Title } from "components/Title/Title";
-import { useExpensesContext } from "context/ExpensesContext";
+import { Button } from "components";
+import { Title } from "components";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { ErrorMessage, InputsContainer, StyledForm, StyledInput } from "./styles";
 import { v4 as uuidv4 } from "uuid";
+import { useExpensesContext } from "context";
 
 interface IFormValues {
   name: string;

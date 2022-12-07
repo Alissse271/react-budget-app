@@ -1,6 +1,5 @@
-import { EditBudgetInput } from "components/EditBudgetInput/EditBudgetInput";
-import { useBudgetContext } from "context/BudgetContext";
-import { useCurrencyContext } from "context/CurrencyContext";
+import { EditBudgetInput } from "components";
+import { useBudgetContext, useCurrencyContext } from "context";
 import { useInput } from "hooks";
 import { useState } from "react";
 import { EditButton, StyledBudgetCard, Title } from "./styles";

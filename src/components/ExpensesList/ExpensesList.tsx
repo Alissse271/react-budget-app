@@ -1,5 +1,6 @@
-import { ExpensesItem } from "components/ExpensesItem/ExpensesItem";
-import { useExpensesContext } from "context/ExpensesContext";
+import { ExpensesItem } from "components";
+import { useExpensesContext } from "context";
+
 import { EmptyList, StyledExpensesList } from "./styles";
 
 export const ExpensesList = () => {

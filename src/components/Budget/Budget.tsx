@@ -1,8 +1,4 @@
-import { BudgetCard } from "components/BudgetCard/BudgetCard";
-import { CurrencySelect } from "components/CurrencySelect/CurrencySelect";
-import { RemainingCard } from "components/RemainingCard/RemainingCard";
-import { SpentCard } from "components/SpentCard/SpentCard";
-import { Title } from "components/Title/Title";
+import { Title, CurrencySelect, BudgetCard, RemainingCard, SpentCard } from "components";
 import { BudgetTitleContainer, CardsContainer, StyledBudget } from "./styles";
 
 export const Budget = () => {

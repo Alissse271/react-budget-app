@@ -1,6 +1,6 @@
-import { ExpensesList } from "components/ExpensesList/ExpensesList";
-import { Search } from "components/Search/Search";
-import { Title } from "components/Title/Title";
+import { ExpensesList } from "components";
+import { Search } from "components";
+import { Title } from "components";
 import { useInput } from "hooks";
 import { StyledExpenses } from "./styles";
 

@@ -1,7 +1,7 @@
-import { Badge } from "components/Badge/Badge";
+import { Badge } from "components";
+import { useExpensesContext } from "context";
 import { IExpense } from "context/ExpensesContext/types";
 import { ButtonDelete, StyledExpensesItem, Container, ExpenseName } from "./styles";
-import { useExpensesContext } from "context/ExpensesContext";
 
 interface IProps {
   expense: IExpense;

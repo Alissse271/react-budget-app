@@ -1,4 +1,4 @@
-import { useCurrencyContext } from "context/CurrencyContext";
+import { useCurrencyContext } from "context";
 import Select, { SingleValue } from "react-select";
 import { styles } from "./styles";
 
