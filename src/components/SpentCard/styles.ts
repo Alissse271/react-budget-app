@@ -15,4 +15,5 @@ const Title = styled.p`
   font-size: 20px;
   line-height: 1.2;
 `;
+
 export { StyledSpentCard, Title };
