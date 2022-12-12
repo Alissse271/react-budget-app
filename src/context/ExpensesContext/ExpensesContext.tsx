@@ -12,7 +12,7 @@ const useExpensesContextValue = () => {
         expenses: [...ctx.expenses, newExpense],
       }));
     },
-    removeExpense: (id) => {
+    deleteExpense: (id) => {
       setExpensesContext((ctx) => ({
         ...ctx,
         expenses: ctx.expenses.filter((expense) => expense.id !== id),

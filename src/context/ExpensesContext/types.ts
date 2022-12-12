@@ -13,5 +13,5 @@ export interface IExpense {
 export interface IExpensesContext {
   expenses: IExpense[];
   setNewExpense: (newExpense: IExpense) => void;
-  removeExpense: (id: string) => void;
+  deleteExpense: (id: string) => void;
 }

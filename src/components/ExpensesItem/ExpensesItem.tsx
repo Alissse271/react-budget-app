@@ -8,21 +8,16 @@ interface IProps {
 }
 
 export const ExpensesItem = ({ expense }: IProps) => {
-  const { removeExpense } = useExpensesContext();
+  const { deleteExpense } = useExpensesContext();
   const handleDeleteExpense = () => {
-    removeExpense(expense.id);
+    deleteExpense(expense.id);
   };
   return (
     <StyledExpensesItem>
       <ExpenseName>{expense.name}</ExpenseName>
       <Container>
-        <Badge>{expense.cost}</Badge>
-        <ButtonDelete
-          type="button"
-          onClick={() => {
-            handleDeleteExpense();
-          }}
-        >
+        <Badge value={expense.cost} />
+        <ButtonDelete type="button" onClick={handleDeleteExpense}>
           {}
         </ButtonDelete>
       </Container>

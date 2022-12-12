@@ -16,7 +16,7 @@ const Title = styled.p`
   line-height: 1.2;
 `;
 
-const EditButton = styled.button`
+const StyledButton = styled.button`
   min-width: 85px;
   padding: 10px 26px;
 
@@ -30,4 +30,4 @@ const EditButton = styled.button`
   cursor: pointer;
 `;
 
-export { StyledBudgetCard, Title, EditButton };
+export { StyledBudgetCard, Title, StyledButton };

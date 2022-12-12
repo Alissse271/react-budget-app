@@ -2,37 +2,41 @@ import { EditBudgetInput } from "components";
 import { useBudgetContext, useCurrencyContext } from "context";
 import { useInput, useToggle } from "hooks";
 import { useState } from "react";
-import { EditButton, StyledBudgetCard, Title } from "./styles";
+import { StyledButton, StyledBudgetCard, Title } from "./styles";
 
 export const BudgetCard = () => {
   const { curentCurrency } = useCurrencyContext();
   const { budget, setNewBudget } = useBudgetContext();
-  const [label, setLabel] = useState("Edit");
   const enteredBudget = useInput();
   const [isEditMode, toggleInput] = useToggle(false);
 
-  const handleGetValue = () => {
+  const handleSave = () => {
     setNewBudget({ value: +enteredBudget.value });
+    toggleInput();
   };
 
-  const handleEnterBudget = () => {
-    setLabel(label === "Edit" ? "Save" : "Edit");
-    toggleInput();
-    handleGetValue();
-  };
+  const handleEdit = () => toggleInput();
+
   return (
     <StyledBudgetCard>
       {isEditMode ? (
-        <EditBudgetInput type={"number"} placeholder={"Enter  budget ..."} {...enteredBudget} />
+        <>
+          <EditBudgetInput type={"number"} placeholder={"Enter  budget ..."} {...enteredBudget} />
+          <StyledButton type="button" onClick={handleSave}>
+            Save
+          </StyledButton>
+        </>
       ) : (
-        <Title>
-          Budget: {curentCurrency.value}
-          {budget.value}
-        </Title>
+        <>
+          <Title>
+            Budget: {curentCurrency.value}
+            {budget.value}
+          </Title>
+          <StyledButton type="button" onClick={handleEdit}>
+            Edit
+          </StyledButton>
+        </>
       )}
-      <EditButton type="button" onClick={handleEnterBudget}>
-        {label}
-      </EditButton>
     </StyledBudgetCard>
   );
 };

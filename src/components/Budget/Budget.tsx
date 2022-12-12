@@ -5,7 +5,7 @@ export const Budget = () => {
   return (
     <StyledBudget>
       <BudgetTitleContainer>
-        <Title label={"Budget"} />
+        <Title label="Budget" />
         <CurrencySelect />
       </BudgetTitleContainer>
       <CardsContainer>
